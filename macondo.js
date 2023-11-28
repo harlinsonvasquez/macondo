@@ -1,4 +1,4 @@
-/*let opcion = prompt("Elige una opción:\n1. almojaba con gaseosa Valor:15.000\n2. subway con gaseosa Valor:23.000\n3. no deseas comprar nada");
+let opcion = prompt("Elige una opción:\n1. almojaba con gaseosa Valor:15.000\n2. subway con gaseosa Valor:23.000\n3. no deseas comprar nada");
 let salario=2500000;
 switch (opcion) {
   case "1":
@@ -19,6 +19,8 @@ console.log("tu saldo disponible del salario es",salario);
 
 
 //maletas
+
+alert('las medidas de tu maleta no cumplen con las medidas permitidas por el areopuerto dale click en ok para redimensionar las medidas')
 
 let medidasMaleta={
     alto:55,
@@ -44,12 +46,12 @@ let minimoAlto=(medidasMaleta.alto/MaletaPasajero.alto)
 //console.log(minimoAlto)
 
 let minimoFactor=Math.min(minimoAlto);
-console.log(minimoFactor)
+//console.log(minimoFactor)
 
 let nuevoAlto= MaletaPasajero.alto*minimoFactor;
 let nuevoLargo = MaletaPasajero.largo* minimoFactor;
 let nuevoAncho=MaletaPasajero.ancho*minimoFactor;
-nuevoAlto=Math.floor(nuevoAlto);
+nuevoAlto=Math.floor(nuevoAlto);//. floor devuelve el maximo entero menor o igual al numero 
 nuevoLargo=Math.floor(nuevoLargo);
 nuevoAncho=Math.floor(nuevoAncho);
 
@@ -63,7 +65,7 @@ let nuevasDimensiones={
 console.log(nuevasDimensiones);
 
 if(
-    nuevasDimensiones.alto<=medidasMaleta.alto &&
+    nuevasDimensiones.alto<=medidasMaleta.alto &&//condicional para comprobar que las 3 medidas cumplan 
     nuevasDimensiones.largo<=medidasMaleta.largo &&
     nuevasDimensiones.ancho<=medidasMaleta.ancho
 ){
@@ -73,7 +75,7 @@ else {
     console.log("Las nuevas dimensiones exceden las medidas permitidas.");
   }
 
-
+alert('la clave del wifi esta en codigo binario dale click para convertir la clave wifi a letras')
   
   let valorMinuto=50000/60;
   let claveBinaria="01110010_01101001_01110111_01101001";
@@ -92,7 +94,7 @@ function binarios(binario){
 }
 let decodificado=binarios(claveBinaria);
 
-console.log("las clave del wifi es : " + "" + decodificado);
+console.log("la clave del wifi es : " + "" + decodificado);
 
 let valorInternet=Number.parseInt(prompt("cuantos minutos de internet gastaste"));
 
@@ -101,13 +103,15 @@ salario=salario-totalInternet;
 
 console.log("tu saldo disponible del salario es",salario);
 
-  
+alert('los lugareños solo usan la vocal i en todas las palabras dale click en ok para mostrarte como pedir un taxi hasta tu lugar de destino')  
 
 let taxi="Taxi me puede llevar al hotel mariposas amarillas";
 
 let conlaI=taxi.replace(/[aeou]/g,'i')
 console.log(conlaI)
-let salario=2500000;
+//let salario=2500000;
+
+alert('el taxiste quiere cobrarte 300MIL pesos por la carrera ganale piedra,papel o tijera para no pagar esa cantidad')
 let taxista=prompt("Taxiste Elige una opción:\n1. piedra  \n2.papel  \n3.tijera")
 
 let hildebrando=prompt("Hildebrando Elige una opción:\n1. piedra  \n2.papel  \n3.tijera")
@@ -127,14 +131,14 @@ else if(taxista==1 && hildebrando==1||(taxista==2 && hildebrando==2)||(taxista==
 else{
     console.log("palabra invalida")
 }
-console.log("el nuevo saldo del salario es " + salario);*/
+console.log("el nuevo saldo del salario es " ,salario);
 
-let dia=1;
+let dia=0;
 let aunVive=true;
-let salario=2500000;
+//let salario=2500000;
 
-while(aunVive=){
-    let vestimenta=prompt("escoja la bestimenta segun la activida que deseas \n1. amarillo \n2.verde \n3.rojo \n4. azul ")
+while(aunVive && dia<4){
+    let vestimenta=prompt(`escoja la bestimenta segun la activida que deseas hacer en el dia ${dia+1} \n1. amarillo \n2.verde \n3.rojo \n4. azul `)
     if(vestimenta==1){
         console.log("te bañaras en la piscina pero vas a morir y terminaran tus vacaciones")
         aunVive=false;
@@ -177,7 +181,7 @@ while(aunVive=){
 
     }
     dia++;
-        console.log("dia :" + dia + "de vacaciones")
-        console.log("saldo de salario es :" + salario)
-
+        
 }
+console.log("dia :" + dia + " de vacaciones")
+console.log("el nuevo saldo del salario es " ,salario);
