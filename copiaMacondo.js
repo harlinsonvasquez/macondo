@@ -61,6 +61,94 @@ function enviarRespuesta(opcionSeleccionada) {
   
 }
 
+function recalcular(){
+    let alto=document.getElementById('alto');
+    let largo=document.getElementById('largo')
+    let ancho=document.getElementById('ancho')
+
+   alto=alto.value;
+   largo=largo.value;
+   ancho=ancho.value;
+
+   
+
+   operacionMatematica(alto,largo,ancho);
+}
+
+function operacionMatematica(alto,largo,ancho){
+
+    let nuevoAlto=document.getElementById('nuevoAlto')
+    let nuevoLargo=document.getElementById('nuevoLargo')
+    let nuevoAncho=document.getElementById('nuevoAncho')
+    let medidasMaleta={
+        alto:55,
+        largo:40,
+        ancho:20
+    
+    };
+    if(alto>medidasMaleta.alto || largo>medidasMaleta.largo || ancho>medidasMaleta.ancho){
+        let minimoAlto=(medidasMaleta.alto/alto)
+        let minimoFactor=Math.min(minimoAlto);
+
+         nuevoAlto.value= alto*minimoFactor;
+         nuevoLargo.value =largo* minimoFactor;
+         nuevoAncho.value=ancho*minimoFactor;
+
+         nuevoAlto=Math.floor(nuevoAlto.value);//. floor devuelve el maximo entero menor o igual al numero 
+         nuevoLargo=Math.floor(nuevoLargo.value);
+         nuevoAncho=Math.floor(nuevoAncho.value);
+         
+    }else{
+        alert("tus maletas cumplem con las medidas")
+    }
+
+}
+
+/*function convertir(){
+
+    let numBinario=document.getElementById('dato');
+    numBinario=numBinario.value;
+
+    operacionBinaria(numBinario);
+}
+
+function operacionBinaria(numBinario){
+    let claveWifi=document.getElementById('ClaveWifi')
+
+    numBinario=numBinario.split('_');//metodo para separar cada numero con un guion
+
+
+    let caracteres=numBinario.map(numBinario=>{//funcion flecha para recorrer todos los binarios
+        let decimal=parseInt(numBinario, 2);//convertir binario a decimal
+        return String.fromCharCode(decimal);//convertir decimal a caracter
+    });
+
+    return caracteres.join('');//metodo para unir todo y retornar los caracteres juntos
+
+    claveWifi.value=operacionBinaria(numBinario);
+
+}*/
+function convertir() {
+    let numBinario = document.getElementById('dato').value; // Obtener el valor del input
+    let resultado = operacionBinaria(numBinario); // Llamar a la función y obtener el resultado
+
+    let claveWifi = document.getElementById('ClaveWifi');
+    claveWifi.value = resultado; // Asignar el resultado al input ClaveWifi
+}
+
+function operacionBinaria(numBinario) {
+    numBinario = numBinario.split('_');
+
+    let caracteres = numBinario.map(num => {
+        let decimal = parseInt(num, 2);
+        return String.fromCharCode(decimal);
+    });
+
+    return caracteres.join('');
+}
+
+
+
 
 //let nuevoSalario=elegirComida();
 /*console.log("tu saldo disponible del salario es",salario);
@@ -125,6 +213,9 @@ else {
 }
 
 medidasMaletas();
+
+
+
 
 function claveWifi(){
 
