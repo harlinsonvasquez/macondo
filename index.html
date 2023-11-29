@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="macondo.js"></script>
+    <script src="copiaMacondo.js" defer></script>
+    <link rel="stylesheet" href="stylees.css">
+  
 
 </head>
 <body>
+<section>
+    <div>
+        <h2>selecciona una de las opciones en el desplegable</h2>
+        <select id="opcionescomida">
+            <option value="1">Almuerzo con gaseosa - Valor: $15.000</option>
+            <option value="2">Subway con gaseosa - Valor: $23.000</option>
+            <option value="3">No deseo comprar nada</option>
+          </select>
+          
+          <button onclick="respuesta()">Enviar</button>
+
+
+          <input type="text" id="respuestaInput" placeholder="Respuesta" readonly >
+          <label for="salario">Nuevo Saldo:</label>
+          <input type="text" id="salario" placeholder="nuevo saldo" readonly >
+    </div>
+</section>
     
 </body>
 </html>
