@@ -4,9 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="index.js" defer></script>
+    <script src="copiaMacondo.js" defer></script>
+    <link rel="stylesheet" href="stylees.css">
+  
+
 </head>
 <body>
+<section class="comida">
+ 
+
+    <div>
+        <h2>selecciona una de las opciones en el desplegable</h2>
+
+       
+  
+
+        <select id="opcionescomida">
+            <option value="1">Almuerzo con gaseosa - Valor: $15.000</option>
+            <option value="2">Subway con gaseosa - Valor: $23.000</option>
+            <option value="3">No deseo comprar nada</option>
+          </select>
+          
+          <button onclick="respuesta()">Enviar</button>
+
+
+          <input type="text" id="respuestaInput" placeholder="Respuesta" readonly >
+          <label for="salario">Nuevo Saldo:</label>
+          <input type="text" id="salario" placeholder="nuevo saldo" readonly >
+    </div>
+</section>
+
+<section class="medidas_maletas">
+    <div class="maletas">
+        <h2>medidas de la maleta de mano</h2>
+        <h3>alto</h3>
+        <input type="number" name="" id="alto">
+        <h3>largo</h3>
+        <input type="number" name="" id="largo">
+        <h3>ancho</h3>
+        <input type="number" name="" id="ancho">
+
+        <button onclick="recalcular()">Recalcular</button>
+
+        <div>
+            <h2>nuevas medidas maleta de mano</h2>
+            <input type="text" id="nuevoAlto" placeholder="Alto" readonly >
+            <input type="text" id="nuevoLargo" placeholder="Largo" readonly >
+            <input type="text" id="nuevoAncho" placeholder="Ancho" readonly >
+        </div>
+    </div>
+</section>
+
+<section class="wifi">
+    <div >
+        <h2>La contraseña está cifrada en números
+            binarios dale click en convertir a caracteres para ver la clave</h2>
+
+        <h3>Valor de la Hora 50.000</h3>
+
+        <input type="text" id="dato" value="01110010_01101001_01110111_01101001" readonly>
+
+        <button onclick="convertir()">Convertir</button>
+
+        <label for="ClaveWifi">Clave Wifi:</label>
+          <input type="text" id="ClaveWifi" placeholder="clave wifi" readonly >
+
+
+    </div>
+</section>
     
 </body>
 </html>
